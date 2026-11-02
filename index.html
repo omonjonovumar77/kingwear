@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="KING WEAR — zamonaviy kiyimlar va aksessuarlar do'koni.">
+  <title>KING WEAR | Premium Fashion</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <p><i class="fa-solid fa-crown"></i> KING WEAR — uslubingni namoyon qil <i class="fa-solid fa-crown"></i></p>
+  </div>
+
+  <header class="header">
+    <a href="#" class="brand">
+      <img src="./rasm/1.jpg" alt="KING WEAR logo">
+      <span>KING <b>WEAR</b><small>STYLE FOR REAL KINGS</small></span>
+    </a>
+
+    <!-- Header Qidiruv Maydoni (Hech qanday ekranni to'suvchi popupsiz) -->
+    <div class="header-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="headerSearch" type="search" placeholder="Qidiruv..." autocomplete="off">
+      <button id="clearHeaderSearch" class="clear-search-btn" type="button" aria-label="Tozalash" hidden>
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="nav">
+      <a href="#home">Bosh sahifa</a>
+      <a href="#products">Kolleksiya</a>
+      <a href="#about">Biz haqimizda</a>
+    </nav>
+
+    <button class="cart-button" id="cartToggle">
+      <i class="fa-solid fa-cart-shopping"></i> Savatcha <span id="count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">YANGI KOLLEKSIYA</span>
+        <h1>O'z uslubingni yarat.<br><span>KING bo'l!</span></h1>
+        <p>Zamonaviy dizayn. Premium ko'rinish. Har kuni o'zingga xos uslub.</p>
+        <a href="#products" class="gold-button">Kolleksiyani ko'rish <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-badge"><i class="fa-solid fa-certificate"></i> PREMIUM COLLECTION</div>
+          <div class="hero-emblem">
+            <div class="crown-icon"><i class="fa-solid fa-crown"></i></div>
+            <div class="hero-brand-name">
+              <span>KING</span>
+              <b>WEAR</b>
+            </div>
+            <small>STYLE FOR REAL KINGS</small>
+          </div>
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-gem"></i>
+              <span>Premium sifat</span>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Tez yetkazish</span>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>100% Original</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><i class="fa-solid fa-gem"></i> <span><b>Premium uslub</b><small>Har bir detalda sifat</small></span></div>
+      <div><i class="fa-solid fa-truck-fast"></i> <span><b>Yetkazib berish</b><small>Buyurtmangiz uchun qulay</small></span></div>
+      <div><i class="fa-solid fa-circle-check"></i> <span><b>Qulay xarid</b><small>Oson va tez buyurtma</small></span></div>
+    </section>
+
+    <section class="shop-section" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SENING TANLOVING</span>
+          <h2>Bizning <span>kolleksiya</span></h2>
+          <p>O'zingga yoqqan mahsulotni tanla.</p>
+        </div>
+        <label class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="search" type="search" placeholder="Mahsulot qidirish..." autocomplete="off">
+        </label>
+      </div>
+
+      <div class="categories" id="categories">
+        <button class="category active" data-category="Barchasi">Barchasi</button>
+        <button class="category" data-category="Kiyim">Kiyimlar</button>
+        <button class="category" data-category="Aksessuar">Aksessuarlar</button>
+        <button class="category" data-category="Oyoq kiyim">Oyoq kiyim</button>
+      </div>
+
+      <div id="productsGrid" class="products-grid"></div>
+      <div id="emptyMessage" class="empty-message" hidden>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <p>Bunday nomdagi mahsulot topilmadi.</p>
+        <button id="resetSearchBtn" class="gold-button" style="padding: 10px 18px; font-size: 11px; margin-top: 8px;">
+          Barcha mahsulotlarni ko'rish
+        </button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-icon"><i class="fa-solid fa-crown"></i></div>
+      <div>
+        <span class="eyebrow">KING WEAR HAQIDA</span>
+        <h2>Oddiy kiyim emas.<br><span>Bu — sening uslubing.</span></h2>
+        <p>Har kuni o'zingni erkin his qil. Sevimli kiyimlaringni tanla va o'z uslubingni namoyon et.</p>
+      </div>
+    </section>
+
+    <section class="cart-section" id="cartSection">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SENING TANLOVLARING</span>
+          <h2><i class="fa-solid fa-cart-shopping"></i> Savatcha</h2>
+        </div>
+        <button class="text-button" id="clearCart"><i class="fa-solid fa-trash-can"></i> Savatchani tozalash</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+     
+      <div class="cart-summary">
+        <span>Jami summa</span>
+        <strong id="total">0 so'm</strong>
+      </div>
+
+      <button id="checkoutButton" class="gold-button checkout-button">
+        Buyurtma berish <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <p class="checkout-note">Buyurtma berishdan oldin mahsulotlar va summani tekshiring.</p>
+    </section>
+  </main>
+
+  <!-- Slide-over Cart Drawer (Yon tomondan ochiladigan savatcha paneli) -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Savatcha">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Savatcha</h3>
+        <span class="cart-drawer-badge" id="drawerBadge">0</span>
+      </div>
+      <button class="cart-drawer-close" id="closeDrawer" aria-label="Yopish">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body" id="drawerItems">
+      <!-- Savatchadagi mahsulotlar bu yerda dinamik chiqadi -->
+    </div>
+
+    <div class="cart-drawer-footer" id="drawerFooter">
+      <div class="cart-drawer-summary">
+        <span>Jami summa:</span>
+        <strong id="drawerTotal">0 so'm</strong>
+      </div>
+      <button id="drawerCheckout" class="gold-button drawer-checkout-btn">
+        Buyurtma berish <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <div class="cart-drawer-actions">
+        <button id="drawerClear" class="drawer-clear-btn">
+          <i class="fa-solid fa-trash-can"></i> Savatchani tozalash
+        </button>
+        <button id="continueShopping" class="continue-shopping-btn">
+          Xaridni davom ettirish
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal (Buyurtmani rasmiylashtirish oynasi) -->
+  <div class="checkout-modal-overlay" id="checkoutOverlay">
+    <div class="checkout-modal" id="checkoutModal">
+      <button class="checkout-modal-close" id="closeCheckout" aria-label="Yopish">&times;</button>
+      <div class="checkout-modal-header">
+        <i class="fa-solid fa-crown"></i>
+        <h3>Buyurtmani rasmiylashtirish</h3>
+        <p>Buyurtmani yakunlash uchun ma'lumotlaringizni kiriting</p>
+      </div>
+      <div class="checkout-order-summary" id="checkoutSummary">
+        <!-- Buyurtma ma'lumotlari -->
+      </div>
+      <form id="checkoutForm" class="checkout-form">
+        <div class="form-group">
+          <label for="custName"><i class="fa-solid fa-user"></i> Ism va familiya</label>
+          <input type="text" id="custName" placeholder="Masalan: Sardor Aliyev" required>
+        </div>
+        <div class="form-group">
+          <label for="custPhone"><i class="fa-solid fa-phone"></i> Telefon raqami</label>
+          <input type="tel" id="custPhone" placeholder="+998 90 123 45 67" required>
+        </div>
+        <div class="form-group">
+          <label for="custAddress"><i class="fa-solid fa-location-dot"></i> Yetkazib berish manzili</label>
+          <input type="text" id="custAddress" placeholder="Shahar, tuman, ko'cha, uy raqami" required>
+        </div>
+        <button type="submit" class="gold-button checkout-submit-btn">
+          Buyurtmani tasdiqlash <i class="fa-solid fa-check"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <a href="#home" class="footer-brand"><i class="fa-solid fa-crown"></i> KING <span>WEAR</span></a>
+    <p>STYLE FOR REAL KINGS</p>
+    <small>© <span id="year"></span> KING WEAR. Barcha huquqlar himoyalangan.</small>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
